@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <TargetFramework>net6.0</TargetFramework>
+        <UserSecretsId>f46ad344-fbbd-4248-ba60-e4a4474a748f</UserSecretsId>
+        <BaseOutputPath>C:\Program Files\PlasticSCM5\client\extensions\clickup</BaseOutputPath>
+	<PublishSingleFile>true</PublishSingleFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <OutputPath>C:\Program Files\PlasticSCM5\client\extensions\clickup</OutputPath>
+      <DebugType>full</DebugType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <OutputPath>C:\Program Files\PlasticSCM5\client\extensions\clickup</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <Optimize>False</Optimize>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="issuetrackerinterface">
+        <HintPath>C:\Program Files\PlasticSCM5\client\issuetrackerinterface.dll</HintPath>
+      </Reference>
+      <Reference Include="log4net">
+        <HintPath>C:\Program Files\PlasticSCM5\client\log4net.dll</HintPath>
+      </Reference>
+      <Reference Include="utils">
+        <HintPath>C:\Program Files\PlasticSCM5\client\utils.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    </ItemGroup>
+
+</Project>
